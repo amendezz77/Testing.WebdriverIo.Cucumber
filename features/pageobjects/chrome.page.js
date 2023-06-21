@@ -15,11 +15,20 @@ class ChromePage extends Page{
     }
 
     get resultEbay() {
-        return $('//android.widget.TextView[@resource-id="com.android.chrome:id/line_1"]');
+        return $('//android.view.ViewGroup[1]/android.view.ViewGroup');
+    }
+
+    get btnAceptContinue() {
+        return $('//android.widget.Button[@resource-id="com.android.chrome:id/terms_accept"]');
+    }
+
+    get btnNoThanks() {
+        return $('//android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]');
     }
 
     async navegateSearchEbay(){
-        await this.btnUsarSinCuenta.click();
+        await this.btnAceptContinue.click();
+        await this.btnNoThanks.click();
         await this.inputBuscador.click();
         await this.inputSearchType.setValue('http://www.ebay.com');
         await this.resultEbay.click();

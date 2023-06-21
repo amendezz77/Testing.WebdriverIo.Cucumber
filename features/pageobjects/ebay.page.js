@@ -20,13 +20,15 @@ class EbayPage extends Page{
 
 
     async searchPilas(){
-        await this.inputSearch.click()
+        await this.inputSearch.click();
         await this.inputSearch.setValue('Pilas');
-        await this.btnSearch.click()
+        await this.btnSearch.click();
+        await this.btnClosed.click();
     }
 
     async getResultTotal(){
         const resultText = await this.getResult.getText();
+        console.log("que traeeeeeee", await regexResult)
         const regexResult = new RegExp("\\d");
         console.log("Esto devuelve el numero de items", await resultText.match(regexResult));
     }

@@ -5,7 +5,6 @@ export const config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    
     port: 4725,
     //
     // ==================
@@ -54,10 +53,10 @@ export const config = {
     //
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
-        automationName:"UiAutomator2", 
+        automationName:"appium", 
         platformName:"Android",
-        platformVersion: '12.0',
-        deviceName: "motorola_moto_22",
+        platformVersion: '10.0',
+        deviceName: "emulator-5554",
         //app: 'D:/ProyectosAutomation/Testing.Automation.AppiumIOJs/app/Android-NativeDemoApp-0.4.0.apk',
         appActivity: 'com.google.android.apps.chrome.Main',
         appPackage:"com.android.chrome"

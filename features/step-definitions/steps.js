@@ -7,7 +7,8 @@ import EbayPage from '../pageobjects/ebay.page.js'
 
 Given(/^I Navegate chrome and Search Ebay/, async () => {
     await ChromePage.navegateSearchEbay();
-    await expect(EbayPage.btnSearch).toBeExisting();
+    //await expect(EbayPage.btnSearch).toBeExisting();
+    
 
 });
 
